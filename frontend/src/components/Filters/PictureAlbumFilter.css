@@ -1,0 +1,149 @@
+.picture-album-filter-container {
+  font-size: large;
+  min-width: 1000px; 
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 15px; 
+  border: solid 2px;
+  border-radius: 10px;
+  border-color: rgba(246, 240, 240, 0.577);
+  color: rgba(246, 240, 240, 0.577);
+  gap: 15px;
+}
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.labelPictureAlbumSelect {
+  color: rgba(246, 240, 240, 0.577);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.picture-album-select {  
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: rgb(171, 167, 167);
+  font-size: 22px;
+  cursor: pointer;
+  min-width: 250px;
+}
+
+.picture-album-select:hover {
+  border-color: #888;
+}
+
+.picture-album-select:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.2);
+}
+
+/* Style pour les groupes dans le dropdown */
+.picture-album-select optgroup {
+  font-weight: bold;
+  font-style: normal;
+  color: #333;
+  background-color: #f5f5f5;
+  padding: 5px;
+}
+
+.picture-album-select option {
+  padding: 5px 10px;
+  color: #333;
+  background-color: white;
+}
+
+.picture-album-select option:hover {
+  background-color: #e6f3ff;
+}
+
+/* Style pour le bouton de reset */
+.reset-filter-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.reset-filter-button:hover {
+  background-color: #c82333;
+}
+
+.reset-filter-button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .picture-album-filter-container {
+    min-width: 300px;
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .filter-section {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .picture-album-select {
+    min-width: 120px;
+  }
+}
+
+/* ================================
+   VERSION COMPACTE (UN SEUL DROPDOWN)
+   ================================ */
+
+.picture-album-filter-container-compact {
+  width: 300px; 
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 5px 15px; 
+  border: solid 2px;
+  border-radius: 10px;
+  border-color: rgba(246, 240, 240, 0.577);
+  color: rgba(246, 240, 240, 0.577);
+  gap: 15px;
+}
+
+/* Style identique à YearFilter pour cohérence */
+.picture-album-filter-container-compact .labelPictureAlbumSelect {
+  color: rgba(246, 240, 240, 0.577);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.picture-album-filter-container-compact .picture-album-select {
+  flex-grow: 1;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 14px;
+  cursor: pointer;
+}

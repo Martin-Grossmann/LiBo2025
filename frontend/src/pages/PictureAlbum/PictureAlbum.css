@@ -1,0 +1,115 @@
+
+
+.pictureAlbum-header{
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 160px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #2c3e50;
+  align-items: center;
+  padding: 1rem 2rem;
+  }
+
+.pictureAlbum-header-text-acceuil{
+  color: rgb(167, 162, 162);
+  font-size: 60px;
+  font-weight: bold;
+  margin: 0;
+}
+.pictureAlbum-Button-and-Filter-Container{
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.pictureAlbum-Button-filterON-OFF{
+  height: 90px;
+  width: 150px;
+  background-color: #2c3e50;
+  border-radius: 10px;
+  color: rgba(246, 240, 240, 0.577);
+  font-size: 16px;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.372);
+  cursor: pointer;
+}
+.pictureAlbum-Button-filterON-OFF:hover { 
+  background-color: #2c3e50; 
+  box-shadow: 0 4px 12px rgba(224, 227, 231, 0.3);
+}
+.pictureAlbum-filter-containerON {
+  display: block !important;
+}
+.pictureAlbum-filter-containerOFF {
+  display: none !important;
+}
+.pictureAlbum-PhotoFilterSymbolHolder{ 
+  display: flex;
+  flex-direction: column;
+  background-color: #333;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+.pictureAlbum-button-open-viewer {
+   text-align: center;  
+   display: inline-block;   
+   height: 60px;
+   width: 250px;     
+   margin: 10px;
+   margin-right : 20px;
+   background-color: #3030305a;
+   color: rgba(246, 240, 240, 0.577);
+   font-size: 25px;
+   font-weight: bold;
+   padding-top: 28px;
+   padding-left: 20px;
+   padding-right: 20px;
+   border-radius: 8px;
+   text-decoration: none;
+   transition: all 0.3s ease;
+   border: none;
+   cursor: pointer;
+   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.372)
+}
+
+.pictureAlbum-button-open-viewer:hover {
+    background-color: #3030308e;   
+    box-shadow: 0 4px 12px rgba(224, 227, 231, 0.3);
+}
+.pictureAlbum-button-Retour {
+   text-align: center;  
+   display: inline-block;   
+   height: 60px;
+   width: 250px;     
+   margin: 10px;
+   margin-right : 80px;
+   background-color: #3030305a;
+   color: rgba(246, 240, 240, 0.577);
+   font-size: 25px;
+   font-weight: bold;
+   padding-top: 28px;
+   padding-left: 20px;
+   padding-right: 20px;
+   border-radius: 8px;
+   text-decoration: none;
+   transition: all 0.3s ease;
+   border: none;
+   cursor: pointer;
+   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.372)
+}
+
+.pictureAlbum-button-Retour:hover {
+    background-color: #3030308e;   
+    box-shadow: 0 4px 12px rgba(224, 227, 231, 0.3);
+}
+.pictureAlbum-ImageFond{
+  position: relative; 
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 130%;
+  box-sizing: border-box;  
+}

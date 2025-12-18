@@ -1,0 +1,187 @@
+.pointimageviewer-header { 
+  height: 80px;
+  font-size: 25px;
+}
+.pointimageviewer-exit-icon {
+  font-size: 2.5rem !important;
+}
+/* Custom scrollbar for description */
+.pointimageviewer-description {
+  scrollbar-width: thin;
+  scrollbar-color: #6b6a6a #aba5a5;
+}
+.pointimageviewer-description::-webkit-scrollbar {
+  width: 8px;
+  background: #e0e0e0;
+}
+.pointimageviewer-description::-webkit-scrollbar-thumb {
+  background: #575656;
+  border-radius: 4px;
+}
+
+/* Custom scrollbar for scrollable description with gray background */
+.pointimageviewer-scrollable-description {
+  scrollbar-width: thin;
+  scrollbar-color: #504f4f #a8a6a6;
+}
+.pointimageviewer-scrollable-description::-webkit-scrollbar {
+  width: 8px;
+  background: #d0d0d0;
+}
+.pointimageviewer-scrollable-description::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+/* Text color only in scrollable description area */
+.pointimageviewer-scrollable-description .pointimageviewer-image-title {
+  color: #333;
+}
+.pointimageviewer-scrollable-description .pointimageviewer-image-description {
+  color: #0d0c0c;
+}
+/* Window responsive */
+.pointimageviewer-image-area {  
+  width: 1573px !important;
+  height: 1089px !important;
+  max-width: 1573px !important;
+  max-height: 1089px !important;
+  margin: 0 auto 0 calc(50% - 786px + 5px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;    
+  font-size: 1.2rem;
+}
+.pointimageviewer-navigation-button {
+  background: rgba(92, 90, 90, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  margin: 0 8px;
+  transition: background 0.2s;
+  margin-left: 16px;
+}
+.pointImageViewer-displayed-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 1331px;
+  max-height: 1089px;
+  object-fit: contain; 
+  margin: 0 auto;
+  
+}
+.pointimageviewer-description {  
+  margin-top: 30px;  
+  width: 100%;
+  text-align: center;
+  align-self: flex-end;
+  max-height: 120px;
+  overflow-y: auto;
+}
+.pointimageviewer-image-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.pointimageviewer-image-description {
+  font-size: 29px;
+  color: #222;
+  margin-bottom: 8px;
+}
+.pointimageviewer-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+}
+.pointimageviewer-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 65px;  
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0 16px;
+}
+.pointimageviewer-window {
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 115vw;
+  max-width: 1815px;
+  height: 109vh;
+  max-height: 1452px;
+  background-color: rgb(214, 210, 210);
+  border-radius: 25px;
+  box-shadow: 10px 5px 5px rgba(0,0,0,0.372);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.pointimageviewer-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.pointimageviewer-header .dialog-controls .control-button svg {
+  font-size: 2.5rem;
+}
+
+/* Conteneur d'affichage d'image */
+.image-display-container {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Image affichée */
+/* Decripton Aera:*/
+.pointimageviewer-image-title {
+  font-weight: bold !important;
+  margin-bottom: 8px !important;
+  font-size: 32px !important;
+}
+.pointimageviewer-image-title.MuiTypography-root {
+  font-size: 32px !important;
+  font-weight: bold !important;
+  margin-bottom: 8px !important;
+}
+
+.PointImageViewer-image-description {
+  max-height: 120px; 
+  height: auto;
+  margin-bottom: 8px !important;
+  font-size: 21px !important;
+  overflow-y: auto;
+}
+
+
+
+
+

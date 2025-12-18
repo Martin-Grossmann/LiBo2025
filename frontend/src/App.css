@@ -1,0 +1,55 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+
+.app {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: rgba(56, 58, 58, 0.276);
+}
+
+/* Styles transférés depuis App.module.css */
+.title {
+  color: darkcyan;  
+}
+
+.menue {
+  justify-content: center;
+}
+
+.mainbuttonContainer {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  width: 400px;
+  height: 210px;
+  margin-top: 50px;  
+  border: solid 3px;
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0.308);
+}
+
+/* Assurez-vous que les pages enfants prennent tout l'espace disponible */
+.app > * {
+  flex: 1;
+  width: 100%;
+  height: 100%; /* Assure que les pages enfants prennent toute la hauteur */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+

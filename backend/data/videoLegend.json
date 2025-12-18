@@ -1,0 +1,68 @@
+[
+  {
+    "videoId": 1,
+    "videoName": "Fatu_Hiva_7.mp4",
+    "videoDescription": "2008 Fatu Hiva",
+    "pointId": 678
+  },
+  {
+    "videoId": 2,
+    "videoName": "Galapagos.mp4",
+    "videoDescription": "2008 Galapagos ",
+    "pointId": 657
+  },
+  {
+    "videoId": 3,
+    "videoName": "Transat4.mp4",
+    "videoDescription": "2006 Transat 4 ",
+    "pointId": 566
+  },
+  {
+    "videoId": 4,
+    "videoName": "Kourou.mp4",
+    "videoDescription": "2006 Kourou. Décollage Ariane 5",
+    "pointId": 592
+  },
+  {
+    "videoId": 5,
+    "videoName": "Les_mecs_en_NC1.mp4",
+    "videoDescription": "2010 Les mecs en Nouvelle Calédonie épisode 1",
+    "pointId": 709
+  },
+  {
+    "videoId": 6,
+    "videoName": "Les_mecs_en_NC2.mp4",
+    "videoDescription": "2010 Les mecs en Nouvelle Calédonie épisode 2",
+    "pointId": 709
+  },
+  {
+    "videoId": 7,
+    "videoName": "Les_pattes_Bleues.mp4",
+    "videoDescription": "2008 Les pattes bleues",
+    "pointId": 654
+  },
+  {
+    "videoId": 8,
+    "videoName": "SIC.mp4",
+    "videoDescription": "2006 La zone intertropicale de convergence (SIC) ",
+    "pointId": 594
+  },
+  {
+    "videoId": 9,
+    "videoName": "RichardsBay.mp4",
+    "videoDescription": "2005 RichardsBay",
+    "pointId": 543
+  },
+  {
+    "videoId": 10,
+    "videoName": "Raiatea.mp4",
+    "videoDescription": "2008 Raiatea",
+    "pointId": 689
+  },
+  {
+    "videoId": 11,
+    "videoName": "Ursula.mp4",
+    "videoDescription": "2009 Ursula en Nouvelle Calédonie",
+    "pointId": 709
+  }
+]

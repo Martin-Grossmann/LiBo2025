@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "escale",
+        "category": "navigation",
+        "color": "#2596be",
+        "textColor": "#eceeed"
+    },
+    {
+        "id": 2,
+        "name": "tempete",
+        "category": "weather",
+        "color": "#dbb839",
+        "textColor": "#ffffff"
+    },
+    {
+        "id": 3,
+        "name": "buvery",
+        "category": "other",
+        "color": "#8920df",
+        "textColor": "#ffffff"
+    },
+    {
+        "id": 4,
+        "name": "mouillage",
+        "category": "navigation",
+        "color": "#50f76c",
+        "textColor": "#332e2e"
+    },
+    {
+        "id": 5,
+        "name": "echouage",
+        "category": "navigation",
+        "color": "#638592",
+        "textColor": "#ffffff"
+    }
+]

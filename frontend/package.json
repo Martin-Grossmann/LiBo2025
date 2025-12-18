@@ -1,0 +1,120 @@
+{
+  "name": "frontend",
+  "version": "1.2.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^7.1.0",
+    "@mui/material": "^7.1.0",
+    "@reduxjs/toolkit": "^2.6.1",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "leaflet": "^1.9.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-globe.gl": "^2.33.2",
+    "react-leaflet": "^5.0.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.6.0",
+    "react-scripts": "5.0.1",
+    "redux": "^5.0.1",
+    "redux-thunk": "^3.1.0",
+    "three": "^0.176.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "frontend": "cross-env REACT_APP_API_PATH=http://localhost:5000/api/v1/ react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "dist": "npm run build && electron-builder",
+    "release": "npm run dist && powershell -Command \"$dest=\"$env:USERPROFILE\\Desktop\\LiBo2025-win32-x64\"; if (Test-Path $dest) { Remove-Item -Path $dest -Recurse -Force }; Copy-Item -Path .\\LiBo2025-win32-x64 -Destination $dest -Recurse -Force\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^38.1.2",
+    "electron-builder": "^26.0.12",
+    "rcedit": "^5.0.2"
+  },
+  "main": "main.js",
+  "build": {
+    "extends": null,
+    "appId": "com.libo2025.app",
+    "productName": "LiBo2025",
+    "files": [
+      "build/**/*",
+      "main.js",
+      "preload.js",
+      "assets/**/*",
+      "package.json",
+      {
+        "from": "../backend",
+        "to": "backend",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "../backend/public",
+        "to": "backend/public",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "../backend/data",
+        "to": "backend/data",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "directories": {
+      "buildResources": "assets",
+      "output": "C:/Users/Martin/Desktop/LiBo2025-win32-x64"
+    },
+    "win": {
+      "icon": "Pumba.ico",
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "artifactName": "${productName} Setup ${version}.exe",
+      "createDesktopShortcut": true,
+      "installerIcon": "assets/Pumba.ico",
+      "uninstallerIcon": "assets/Pumba.ico",
+      "runAfterFinish": false
+    },
+    "asar": false,
+    "afterPack": "./afterPack.js"
+  },
+  "homepage": ".",
+  "author": "Martin Grossmann",
+  "description": "Application Electron React LiBo2025 avec icône personnalisée et conformité antivirus.",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

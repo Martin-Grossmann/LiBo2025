@@ -1,0 +1,62 @@
+.tagListContainer {
+    margin-top: 15px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.tagListHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tagListTitle {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.addTagButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.addTagButton:hover {
+    background-color: #45a049;
+}
+
+.tagSelectorWrapper {
+    margin-bottom: 15px;
+}
+
+.tagsContainer {
+    margin-top: 10px;
+}
+
+.tagsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.noTagsMessage {
+    color: #666;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.loadingMessage {
+    color: #666;
+    font-size: 14px;
+}
+
+.errorMessage {
+    color: #d32f2f;
+    font-size: 14px;
+}

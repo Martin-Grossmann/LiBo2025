@@ -1,0 +1,38 @@
+/* Table spacing and row styling for navigation stats.
+   Target both the existing table class used in JSX ('trip-navigation-table')
+   and the older local name to be robust. */
+.trip-navigation-table,
+.nav-stat-table {
+  width: 100%;
+  border-collapse: separate; /* allow vertical spacing */
+  border-spacing: 0 12px;
+}
+
+.trip-navigation-table tbody tr.tr-container,
+.nav-stat-table tbody tr.tr-container {
+  background: rgba(255,255,255,0.03);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+@media (min-width: 2000px) {
+  .trip-navigation-table,
+  .nav-stat-table {
+    border-spacing: 0 20px;
+  }
+}
+
+/* Header titles larger */
+.trip-navigation-table thead th,
+.nav-stat-table thead th {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 8px 10px;
+}
+
+@media (min-width: 2000px) {
+  .trip-navigation-table thead th,
+  .nav-stat-table thead th {
+    font-size: 1.15rem;
+  }
+}

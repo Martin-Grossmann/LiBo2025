@@ -1,0 +1,306 @@
+.pointvideoviewer-header { 
+  height: 80px;
+  font-size: 25px;
+}
+.pointvideoviewer-exit-icon {
+  font-size: 2.5rem !important;
+}
+/* Ajout pour le titre Vidéos (1/3) */
+.pointvideoviewer-header-title {
+  font-size: 26px;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 0;
+  margin-right: 16px;
+  letter-spacing: 0.01em;
+}
+/* Custom scrollbar for description */
+.pointvideoviewer-description {
+  scrollbar-width: thin;
+  scrollbar-color: #6b6a6a #aba5a5;
+}
+.pointvideoviewer-description::-webkit-scrollbar {
+  width: 8px;
+  background: #e0e0e0;
+}
+.pointvideoviewer-description::-webkit-scrollbar-thumb {
+  background: #575656;
+  border-radius: 4px;
+}
+
+/* Custom scrollbar for scrollable description with gray background */
+.pointvideoviewer-scrollable-description {
+  scrollbar-width: thin;
+  scrollbar-color: #504f4f #a8a6a6;
+}
+.pointvideoviewer-scrollable-description::-webkit-scrollbar {
+  width: 8px;
+  background: #d0d0d0;
+}
+.pointvideoviewer-scrollable-description::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+/* Text color only in scrollable description area */
+.pointvideoviewer-scrollable-description .pointvideoviewer-video-title {
+  color: #333;
+}
+.pointvideoviewer-scrollable-description .pointvideoviewer-video-description {
+  color: #0d0c0c;
+}
+/* Window responsive */
+.pointvideoviewer-video-area {  
+  width: 1573px !important;
+  height: 1089px !important;
+  max-width: 1573px !important;
+  max-height: 1089px !important;
+  margin: 0 auto 0 calc(50% - 786px + 5px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;    
+  font-size: 1.2rem;
+}
+.pointvideoviewer-navigation-button {
+  background: rgba(92, 90, 90, 0.7) !important;
+  border: none !important;
+  border-radius: 50% !important;
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  color: white !important;
+  font-size: 2rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 2 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transition: background 0.2s !important;
+}
+.pointvideoviewer-navigation-button:hover {
+  background: rgba(92, 90, 90, 0.9) !important;
+}
+.pointvideoviewer-navigation-button svg {
+  font-size: 2rem !important;
+}
+
+.pointVideoViewer-displayed-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 1331px;
+  max-height: 1089px;
+  object-fit: contain; 
+  margin: 0 auto;
+  
+}
+.pointvideoviewer-description {  
+  margin-top: 30px;  
+  width: 100%;
+  text-align: center;
+  align-self: flex-end;
+  max-height: 120px;
+  overflow-y: auto;
+}
+.pointvideoviewer-video-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.pointvideoviewer-video-description {
+  font-size: 29px;
+  color: #222;
+  margin-bottom: 8px;
+}
+.pointvideoviewer-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+}
+.pointvideoviewer-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 65px;  
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0 16px;
+}
+.pointvideoviewer-window {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 115vw;
+  max-width: 1815px;
+  height: 109vh;
+  max-height: 1452px;
+  background-color: rgb(214, 210, 210);
+  box-shadow: 10px 5px 5px rgba(0,0,0,0.372);
+  border-radius: 25px; 
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.pointvideoviewer-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.pointvideoviewer-header .dialog-controls .control-button svg {
+  font-size: 2.5rem;
+}
+
+/* Conteneur d'affichage de vidéo */
+.video-display-container {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Video affichée */
+/* Description Area:*/
+.pointvideoviewer-video-title {
+  font-weight: bold !important;
+  margin-bottom: 8px !important;
+  font-size: 32px !important;
+}
+.pointvideoviewer-video-title.MuiTypography-root {
+  font-size: 32px !important;
+  font-weight: bold !important;
+  margin-bottom: 8px !important;
+}
+
+.PointVideoViewer-video-description {
+  max-height: 120px; 
+  height: auto;
+  margin-bottom: 8px !important;
+  font-size: 21px !important;
+  overflow-y: auto;
+}
+
+.pointvideoviewer-loading-container,
+.pointvideoviewer-error-container,
+.pointvideoviewer-empty-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.pointvideoviewer-display-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.pointvideoviewer-player-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  overflow: visible;
+}
+
+.pointvideoviewer-player-area {
+  width: 100%;
+  max-width: 1600px;  
+  max-height: 65vh;
+  padding: 0 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ajustement du lecteur vidéo à la zone player-area */
+.pointvideoviewer-player-area .video-player {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+.pointvideoviewer-player-area .video-element {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
+.pointvideoviewer-nav-prev {
+  left: 0 !important;
+}
+.pointvideoviewer-nav-next {
+  right: 0 !important;
+}
+
+.pointvideoviewer-loading-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+.pointvideoviewer-description-area { 
+  width: 100%;
+  max-width: 1160px;
+  min-height: 50px;
+  padding: 16px;
+  margin-top: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pointvideoviewer-display-title {
+  margin-bottom: 8px !important;
+  font-size: 26px !important;
+}
+
+.pointvideoviewer-display-description {
+  margin-bottom: 16px;
+  white-space: pre-line;
+  font-size: 26px;
+  color: #0c0c0c;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.pointvideoviewer-display-metadata {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.6);
+}

@@ -1,0 +1,32 @@
+/* Ensure vertical spacing between table rows */
+.escale-navigation-table {
+  width: 100%;
+  border-collapse: separate; /* allow vertical spacing */
+  border-spacing: 0 12px; /* horizontal vertical */
+}
+
+.escale-navigation-table tbody tr.tr-container {
+  background: rgba(255,255,255,0.03);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Larger gap on very large screens */
+@media (min-width: 2000px) {
+  .escale-navigation-table {
+    border-spacing: 0 20px;
+  }
+}
+
+/* Header titles larger */
+.escale-navigation-table thead th {
+  font-size: 1rem; /* base larger size */
+  font-weight: 600;
+  padding: 8px 10px;
+}
+
+@media (min-width: 2000px) {
+  .escale-navigation-table thead th {
+    font-size: 1.15rem;
+  }
+}

@@ -1,0 +1,37 @@
+/* Spacing and styling for speed table rows.
+   Target the table class used in the JSX ('speed-navigation-table') */
+.speed-navigation-table,
+.speed-stat-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+.speed-navigation-table tbody tr.tr-speed,
+.speed-stat-table tbody tr.tr-speed {
+  background: rgba(255,255,255,0.03);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+@media (min-width: 2000px) {
+  .speed-navigation-table,
+  .speed-stat-table {
+    border-spacing: 0 20px;
+  }
+}
+
+/* Header titles larger */
+.speed-navigation-table thead th,
+.speed-stat-table thead th {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 8px 10px;
+}
+
+@media (min-width: 2000px) {
+  .speed-navigation-table thead th,
+  .speed-stat-table thead th {
+    font-size: 1.15rem;
+  }
+}

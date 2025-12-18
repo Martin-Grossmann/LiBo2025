@@ -1,0 +1,7 @@
+/node_modules
+/.vscode
+/.env
+/public
+.pictureLegend.json
+.videoLegend.json
+node.exe

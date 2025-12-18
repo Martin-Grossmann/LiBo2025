@@ -1,0 +1,59 @@
+/* Styles isolés pour HelpWindows uniquement */
+.helpwindows-container {
+  margin-top: 50px;
+	background-color: rgb(157, 155, 155);
+	border-radius: 18px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2000;
+	width: 100vw;
+	max-width: 1900px;
+	height: 82vh;
+	max-height: 1200px;
+	box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.372);
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.helpwindow-controls-top {
+	height: 65px;	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 20px;
+	background-color: rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+	flex-shrink: 0;
+}
+
+.helpwindow-exit-controls {
+  margin-right: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.helpwindow-control-button.helpwindow-exit-button {
+	background: none;
+	border: none;
+	font-size: 2rem;
+	color: #333;
+	cursor: pointer;
+	padding: 0 10px;
+}
+
+.helpwindow-main-container {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.helpwindow-image-counter {
+	font-weight: bold;
+	font-size: 1.2rem;
+	color: aliceblue;
+}

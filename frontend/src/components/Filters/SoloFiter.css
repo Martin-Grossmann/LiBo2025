@@ -1,0 +1,12 @@
+.solo-filter-container{
+  width: 180px;
+  height: 65px;
+  font-size: 20px;
+  margin-right: 8px;
+  padding-left: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: solid 2px;
+  border-radius: 10px;
+  border-color: rgba(246, 240, 240, 0.577);
+}
