@@ -16,7 +16,8 @@ import {
   BULK_FETCH_HAS_VIDEOS_FAILURE,
 } from "./types";
 
-const API_URL = "/api/v1/videos"; // Adjust this to your actual API endpoint
+const API_BASE_URL = 'http://localhost:5000/api/v1';
+const API_URL = `${API_BASE_URL}/videos`; // Adjust this to your actual API endpoint
 
 // Action creators
 export const fetchVideosRequest = () => ({
@@ -96,7 +97,7 @@ export const fetchVideos = () => {
   return async (dispatch) => {
     dispatch(fetchVideosRequest());
     try {
-      const response = await fetch(`http://localhost:5000/api/v1/videos`);
+      const response = await fetch(`${API_URL}`);
       if (!response.ok) {
         throw new Error("Failed to fetch videos");
       }
@@ -150,7 +151,7 @@ export const fetchVideoById = (videoId) => {
     dispatch(fetchVideosRequest());
     try {
       const response = await fetch(
-        `http://localhost:5000/api/v1/videos/${videoId}`
+        `${API_URL}/${videoId}`
       );
       if (!response.ok) {
         throw new Error(`Failed to fetch video with ID: ${videoId}`);
@@ -175,7 +176,7 @@ export const fetchVideoByPointId = (pointId) => {
     dispatch(fetchVideosRequest());
     try {
       const response = await fetch(
-        `http://localhost:5000/api/v1/points/${pointId}/videos`,
+        `${API_BASE_URL}/points/${pointId}/videos`,
         {
           method: "GET",
         }
@@ -198,7 +199,7 @@ export const fetchHasVideo = (pointId) => {
     dispatch(fetchHasVideosRequest());
     try {
       const response = await fetch(
-        `http://localhost:5000/api/v1/points/${pointId}/has-videos`,
+        `${API_BASE_URL}/points/${pointId}/has-videos`,
         {
           method: "GET",
         }
@@ -221,7 +222,7 @@ export const bulkFetchHasVideos = (pointIds) => {
     dispatch(bulkFetchHasVideosRequest());
     try {
       const response = await fetch(
-        "http://localhost:5000/api/v1/points/bulk-has-videos",
+        `${API_BASE_URL}/points/bulk-has-videos`,
         {
           method: "POST",
           headers: {

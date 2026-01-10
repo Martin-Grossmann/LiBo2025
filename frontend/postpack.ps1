@@ -2,7 +2,7 @@
 # Usage : appelé automatiquement par electron-builder (voir package.json)
 
 $source = "..\backend\node_modules"
-$dest = "$env:USERPROFILE\Desktop\LiBo2025-win32-x64\win-unpacked\resources\app\backend\node_modules"
+$dest = "LiBo2025-win32-x64\win-unpacked\resources\app\backend\node_modules"
 
 Write-Host "Copie de $source vers $dest ..."
 
@@ -16,7 +16,7 @@ robocopy $source $dest /E /COPY:DAT /R:0 /W:0 /NFL /NDL
 
 # Copie node.exe depuis Program Files\nodejs
 $nodeSource = "C:\Program Files\nodejs\node.exe"
-$nodeDest = "$env:USERPROFILE\Desktop\LiBo2025-win32-x64\win-unpacked\resources\app\backend\node.exe"
+$nodeDest = "LiBo2025-win32-x64\win-unpacked\resources\app\backend\node.exe"
 
 if (Test-Path $nodeSource) {
     Copy-Item -Path $nodeSource -Destination $nodeDest -Force

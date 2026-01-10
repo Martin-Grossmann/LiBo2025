@@ -16,7 +16,7 @@ import {
   BULK_FETCH_HAS_PICTURES_FAILURE,
 } from "./types";
 
-// Nettoyage : API_URL inutilisé supprimé
+const API_BASE_URL = 'http://localhost:5000/api/v1';
 
 // Action creators
 export const fetchPicturesRequest = () => ({
@@ -67,7 +67,7 @@ export const fetchPictures = () => {
     // request dans 
     dispatch(fetchPicturesRequest());
     try {
-      const response = await fetch(`http://localhost:5000/api/v1/pictures`);
+      const response = await fetch(`${API_BASE_URL}/pictures`);
       if (!response.ok) {
         throw new Error("Failed to fetch pictures");
       }
@@ -84,7 +84,7 @@ export const fetchPictureById = (pictureId) => {
     dispatch(fetchPicturesRequest());
     try {
       const response = await fetch(
-        `http://localhost:5000/api/v1/pictures/${pictureId}`
+        `${API_BASE_URL}/pictures/${pictureId}`
       );
       if (!response.ok) {
         throw new Error(`Failed to fetch picture with ID: ${pictureId}`);
@@ -109,7 +109,7 @@ export const fetchPictureByPointId = (pointId) => {
     dispatch(fetchPicturesRequest());
     try {
       const response = await fetch(
-        `http://localhost:5000/api/v1/points/${pointId}/pictures`,
+        `${API_BASE_URL}/points/${pointId}/pictures`,
         {
           method: "GET",
         }
@@ -146,7 +146,7 @@ export const fetchHasPicture = (pointId) => {
     dispatch(fetchHasPicturesRequest());
     try {
       const response = await fetch(
-        `http://localhost:5000/api/v1/points/${pointId}/has-pictures`,
+        `${API_BASE_URL}/points/${pointId}/has-pictures`,
         {
           method: "GET",
         }
@@ -183,7 +183,7 @@ export const bulkFetchHasPictures = (pointIds) => {
     dispatch(bulkFetchHasPicturesRequest());
     try {
       const response = await fetch(
-        "http://localhost:5000/api/v1/points/bulk-has-pictures",
+        `${API_BASE_URL}/points/bulk-has-pictures`,
         {
           method: "POST",
           headers: {

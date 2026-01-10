@@ -3,6 +3,8 @@ export const FETCH_STATS_REQUEST = 'FETCH_STATS_REQUEST';
 export const FETCH_STATS_SUCCESS = 'FETCH_STATS_SUCCESS';
 export const FETCH_STATS_FAILURE = 'FETCH_STATS_FAILURE';
 
+const API_BASE_URL = 'http://localhost:5000/api/v1';
+
 // Action Creators
 export const fetchStatsRequest = () => ({
   type: FETCH_STATS_REQUEST
@@ -65,7 +67,7 @@ export const fetchStats = () => {
     dispatch(fetchStatsRequest());
     
     try {
-      const response = await fetch(`http://localhost:5000/api/v1/stats/largest-distances`);
+      const response = await fetch(`${API_BASE_URL}/stats/largest-distances`);
       
       if (!response.ok) {
         throw new Error("Failed to fetch stats");
@@ -92,7 +94,7 @@ export const fetchLongestNavigations = () => {
     dispatch(fetchStatsRequest());
     
     try {
-      const response = await fetch(`http://localhost:5000/api/v1/stats/longest-navigations`);
+      const response = await fetch(`${API_BASE_URL}/stats/longest-navigations`);
       
       if (!response.ok) {
         throw new Error("Failed to fetch longest navigations");
@@ -120,8 +122,8 @@ export const fetchLongestStops = () => {
     dispatch(fetchStatsRequest());
     
     try {
-      console.log("Fetching from API: http://localhost:5000/api/v1/stats/longest-stops");
-      const response = await fetch(`http://localhost:5000/api/v1/stats/longest-stops`);
+      console.log(`Fetching from API: ${API_BASE_URL}/stats/longest-stops`);
+      const response = await fetch(`${API_BASE_URL}/stats/longest-stops`);
       
       console.log("API response status:", response.status);
       

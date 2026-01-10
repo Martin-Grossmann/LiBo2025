@@ -17,7 +17,8 @@ import {
 import { bulkFetchHasPictures } from "./picturesActions";
 import { bulkFetchHasVideos } from "./videosActions";
 
-const API_URL = "/api/points"; // Adjust this to your actual API endpoint
+const API_BASE_URL = 'http://localhost:5000/api/v1';
+const API_URL = `${API_BASE_URL}/points`; // Adjust this to your actual API endpoint
 
 // Action creators
 export const fetchPointsRequest = () => ({
@@ -87,7 +88,7 @@ export const fetchPoints = () => {
   return async (dispatch) => {
     dispatch(fetchPointsRequest());
     try {
-      const response = await fetch(`http://localhost:5000/api/v1/points`);
+      const response = await fetch(`${API_URL}`);
       if (!response.ok) {
         throw new Error("Failed to fetch points");
       }
@@ -113,7 +114,7 @@ export const fetchPointsByYear = (year) => {
     dispatch(fetchPointsRequest());
     try {
       const response = await fetch(
-        `http://localhost:5000/api/v1/points/year/${year}`
+        `${API_URL}/year/${year}`
       );
       if (!response.ok) {
         throw new Error("Failed to fetch points");
@@ -204,7 +205,7 @@ export const fetchPointsBetweenDates = (startDate, endDate) => {
       console.log(`Fetching points between ${startDate} and ${endDate}`); // Debug
       
       // First, fetch all points
-      const response = await fetch(`http://localhost:5000/api/v1/points`);
+      const response = await fetch(`${API_URL}`);
       
       if (!response.ok) {
         throw new Error("Failed to fetch points");
@@ -243,7 +244,7 @@ export const fetchPointsBetweenDates = (startDate, endDate) => {
 export const fetchAvailableDateRanges = () => {
   return async (dispatch) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/v1/points/date-ranges`);
+      const response = await fetch(`${API_URL}/date-ranges`);
       
       if (!response.ok) {
         throw new Error("Failed to fetch available date ranges");

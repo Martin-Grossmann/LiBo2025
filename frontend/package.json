@@ -32,8 +32,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "electron": "electron .",
-    "dist": "npm run build && electron-builder",
-    "release": "npm run dist && powershell -Command \"$dest=\"$env:USERPROFILE\\Desktop\\LiBo2025-win32-x64\"; if (Test-Path $dest) { Remove-Item -Path $dest -Recurse -Force }; Copy-Item -Path .\\LiBo2025-win32-x64 -Destination $dest -Recurse -Force\""
+    "dist": "npm run build && electron-builder --dir",
+    "release": "npm run dist && powershell -ExecutionPolicy Bypass -File buildSetup.ps1"
   },
   "eslintConfig": {
     "extends": [
@@ -82,22 +82,11 @@
     ],
     "directories": {
       "buildResources": "assets",
-      "output": "C:/Users/Martin/Desktop/LiBo2025-win32-x64"
+      "output": "./LiBo2025-win32-x64"
     },
     "win": {
       "icon": "Pumba.ico",
       "signAndEditExecutable": false
-    },
-    "nsis": {
-      "oneClick": false,
-      "perMachine": false,
-      "allowElevation": true,
-      "allowToChangeInstallationDirectory": true,
-      "artifactName": "${productName} Setup ${version}.exe",
-      "createDesktopShortcut": true,
-      "installerIcon": "assets/Pumba.ico",
-      "uninstallerIcon": "assets/Pumba.ico",
-      "runAfterFinish": false
     },
     "asar": false,
     "afterPack": "./afterPack.js"

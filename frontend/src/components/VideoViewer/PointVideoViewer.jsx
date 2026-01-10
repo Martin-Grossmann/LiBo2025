@@ -62,14 +62,16 @@ const PointVideoViewer = ({ pointId, open, onClose }) => {
       return video.url;
     }
 
+    const apiBase = 'http://localhost:5000';
+
     if (video.videoName) {
-      return `http://localhost:5000/videos/${video.videoName}`;
+      return `${apiBase}/videos/${video.videoName}`;
     }
 
     if (video.video_url) return video.video_url;
-    if (video.file_name) return `http://localhost:5000/videos/${video.file_name}`;
+    if (video.file_name) return `${apiBase}/videos/${video.file_name}`;
 
-    return `http://localhost:5000/api/v1/videos/${video.id}/file`;
+    return `${apiBase}/api/v1/videos/${video.id}/file`;
   };
 
   // Fonction pour obtenir la description de la vidéo

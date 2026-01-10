@@ -29,7 +29,7 @@ export const filterImagesByTags = (images, selectedCategory, selectedSubCategory
 // Fonction pour charger les images depuis l'API
 export const loadImagesFromAPI = async () => {
   try {
-    const response = await fetch('/api/picture-photo-album');
+    const response = await fetch('/api/v1/picture-photo-album');
     if (!response.ok) {
       throw new Error('Failed to fetch images');
     }

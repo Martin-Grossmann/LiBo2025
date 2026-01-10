@@ -45,7 +45,8 @@ const PictureDisplay = ({ initialPictureId, pointId, showInputSection = true }) 
   // Update imageUrl when picture changes
   useEffect(() => {
     if (picture && picture.imageName) {
-      const url = `http://localhost:5000/images/${picture.imageName}`;
+      const apiBase = 'http://localhost:5000';
+      const url = `${apiBase}/images/${picture.imageName}`;
       setImageUrl(url);
     } else {
       setImageUrl(null);

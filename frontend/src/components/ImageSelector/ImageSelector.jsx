@@ -8,7 +8,8 @@ const ImageSelector = ({ initialPictureId, onImageSelect }) => {
     useEffect(() => {
         const fetchPointPictureInfo = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/v1/points/${1}/has-pictures`);
+                const apiBase = 'http://localhost:5000/api/v1';
+                const response = await fetch(`${apiBase}/points/${1}/has-pictures`);
 
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);

@@ -10,7 +10,8 @@ import {
   TOGGLE_ALBUM_PHOTO_VIEWER,
 } from "./types";
 
-const API_URL = "/api/v1/picture-photo-album";
+const API_BASE_URL = 'http://localhost:5000';
+const API_URL = `${API_BASE_URL}/api/v1/picture-photo-album`;
 
 // Action creators pour les requêtes API
 export const fetchPictureAlbumRequest = () => ({
@@ -63,7 +64,7 @@ export const fetchPictureAlbum = () => {
   return async (dispatch) => {
     dispatch(fetchPictureAlbumRequest());
     try {
-      const response = await fetch(`http://localhost:5000${API_URL}`);
+      const response = await fetch(`${API_URL}`);
       if (!response.ok) {
         throw new Error(`Failed to fetch picture album: ${response.status} ${response.statusText}`);
       }
@@ -72,7 +73,7 @@ export const fetchPictureAlbum = () => {
       // Transformer les données pour correspondre au format attendu par le frontend
       const transformedImages = data.map(image => ({
         id: image.imageId,
-        src: `http://localhost:5000/${image.imagePath}`,
+        src: `${API_BASE_URL}/${image.imagePath}`,
         title: image.imageName,
         description: image.imageDescription,
         tags: image.tags,
@@ -96,7 +97,7 @@ export const fetchPictureAlbumById = (imageId) => {
   return async (dispatch) => {
     dispatch(fetchPictureAlbumRequest());
     try {
-      const response = await fetch(`http://localhost:5000${API_URL}/${imageId}`);
+      const response = await fetch(`${API_URL}/${imageId}`);
       if (!response.ok) {
         throw new Error(`Failed to fetch album image with ID: ${imageId}`);
       }
@@ -105,7 +106,7 @@ export const fetchPictureAlbumById = (imageId) => {
       // Transformer l'image pour correspondre au format attendu
       const transformedImage = {
         id: data.imageId,
-        src: `http://localhost:5000/${data.imagePath}`,
+        src: `${API_BASE_URL}/${data.imagePath}`,
         title: data.imageName,
         description: data.imageDescription,
         tags: data.tags,
@@ -128,7 +129,7 @@ export const fetchFilteredPictureAlbum = (category, subCategory) => {
   return async (dispatch) => {
     dispatch(fetchPictureAlbumRequest());
     try {
-      let url = `http://localhost:5000${API_URL}`;
+      let url = `${API_URL}`;
       const params = new URLSearchParams();
       
       if (category) params.append('category', category);
@@ -147,7 +148,7 @@ export const fetchFilteredPictureAlbum = (category, subCategory) => {
       // Transformer les données
       const transformedImages = data.map(image => ({
         id: image.imageId,
-        src: `http://localhost:5000/${image.imagePath}`,
+        src: `${API_BASE_URL}/${image.imagePath}`,
         title: image.imageName,
         description: image.imageDescription,
         tags: image.tags,

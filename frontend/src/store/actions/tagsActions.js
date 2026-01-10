@@ -19,7 +19,7 @@ import {
   FETCH_TAGS_BY_CATEGORY_FAILURE
 } from "./types";
 
-const API_BASE_URL = "http://localhost:5000/api/v1";
+const API_BASE_URL = 'http://localhost:5000/api/v1';
 
 // Fetch all tags
 export const fetchTagsRequest = () => ({

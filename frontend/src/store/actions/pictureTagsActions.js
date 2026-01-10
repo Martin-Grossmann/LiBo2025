@@ -19,7 +19,8 @@ import {
   SEARCH_PICTURES_BY_TAGS_FAILURE,
 } from "./types";
 
-const API_URL = "http://localhost:5000/api/v1/picture-tags";
+const API_BASE_URL = 'http://localhost:5000/api/v1';
+const API_URL = `${API_BASE_URL}/picture-tags`;
 
 // Fetch all picture-tag relationships
 export const fetchPictureTagsRequest = () => ({

@@ -29,6 +29,9 @@ frontend/src/assets/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+build-output.log
+npm_full_output.log
+build_result.log
 
 # Editor directories
 .vscode
@@ -37,3 +40,21 @@ yarn-error.log*
 # OS files
 .DS_Store
 desktop.ini
+verif_build.ps1
+
+# Build artifacts and executables
+*.exe
+*.pak
+frontend/LiBo2025-win32-x64/
+frontend/buildSetup.ps1
+frontend/generateInnoScript.ps1
+
+# InnoSetup files
+InnoSetup Annexes/*.iss
+InnoSetup Annexes/*.txt.backup
+
+# IDE and temporary files
+*.swp
+*.swo
+*~
+.DS_Store
