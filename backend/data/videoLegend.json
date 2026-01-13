@@ -68,8 +68,26 @@
   {
     "videoId": 12,
     "videoName": "Passage Antiméridien.mp4",
-    "videoDescription": "2009 Anniversaire de Math",
+    "videoDescription": "2002 Anniversaire de Math",
     "pointId": 337
+  },
+  {
+    "videoId": 13,
+    "videoName": "Hiva Oa.mp4",
+    "videoDescription": "2008 Hiva Oa, Marquises",
+    "pointId": 680
+  },
+  {
+    "videoId": 14,
+    "videoName": "Thauata.mp4",
+    "videoDescription": "2008 Tahuata, Marquises",
+    "pointId": 679
+  },
+  {
+    "videoId": 15,
+    "videoName": "Ua-Pou.mp4",
+    "videoDescription": "2008 Ua-Pou, Marquises",
+    "pointId": 681
   }
 
 ]
