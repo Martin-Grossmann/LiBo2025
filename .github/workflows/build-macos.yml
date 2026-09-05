@@ -1,0 +1,65 @@
+name: Build Desktop (Windows + macOS)
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  build-desktop:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - windows-latest
+          - macos-latest
+
+    defaults:
+      run:
+        working-directory: frontend
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build macOS app
+        if: runner.os == 'macOS'
+        run: npm run release:mac
+
+      - name: Build Windows app
+        if: runner.os == 'Windows'
+        run: npm run build && npx electron-builder --win
+
+      - name: Upload macOS artifacts
+        if: runner.os == 'macOS'
+        uses: actions/upload-artifact@v4
+        with:
+          name: libo2025-macos
+          path: |
+            frontend/dist/**/*.dmg
+            frontend/dist/**/*.zip
+            frontend/dist/**/*.app
+
+      - name: Upload Windows artifacts
+        if: runner.os == 'Windows'
+        uses: actions/upload-artifact@v4
+        with:
+          name: libo2025-windows
+          path: |
+            frontend/dist/**/*.exe
+            frontend/dist/**/*.msi
+            frontend/dist/**/*.yml
+          if-no-files-found: warn
