@@ -16,7 +16,9 @@ backend/node.exe
 backend/public/images/
 backend/public/videos/
 frontend/assets/
-frontend/src/assets/
+frontend/src/assets/*
+!frontend/src/assets/Help2D.mp4
+!frontend/src/assets/Help3D.mp4
 
 # Environment variables
 .env

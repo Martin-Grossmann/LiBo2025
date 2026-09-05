@@ -24,6 +24,8 @@ yarn-error.log*
 
 # Large video files
 /src/assets/*.mp4
+!/src/assets/Help2D.mp4
+!/src/assets/Help3D.mp4
 
 # Build logs
 build-log.txt
