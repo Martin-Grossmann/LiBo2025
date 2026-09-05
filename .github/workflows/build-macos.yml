@@ -35,6 +35,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Prepare CI build config
+        shell: bash
+        run: |
+          node -e "const fs=require('fs'); const p='package.json'; const j=JSON.parse(fs.readFileSync(p,'utf8')); j.scripts=j.scripts||{}; if(!j.scripts['release:mac']){ j.scripts['release:mac']='npm run build && electron-builder --mac'; } if(j.build && j.build.win && j.build.win.icon && !fs.existsSync(j.build.win.icon)){ delete j.build.win.icon; } fs.writeFileSync(p, JSON.stringify(j, null, 2));"
+
       - name: Build macOS app
         if: runner.os == 'macOS'
         run: npm run release:mac
@@ -52,6 +57,10 @@ jobs:
             frontend/dist/**/*.dmg
             frontend/dist/**/*.zip
             frontend/dist/**/*.app
+            frontend/LiBo2025-win32-x64/**/*.dmg
+            frontend/LiBo2025-win32-x64/**/*.zip
+            frontend/LiBo2025-win32-x64/**/*.app
+          if-no-files-found: warn
 
       - name: Upload Windows artifacts
         if: runner.os == 'Windows'
@@ -62,4 +71,7 @@ jobs:
             frontend/dist/**/*.exe
             frontend/dist/**/*.msi
             frontend/dist/**/*.yml
+            frontend/LiBo2025-win32-x64/**/*.exe
+            frontend/LiBo2025-win32-x64/**/*.msi
+            frontend/LiBo2025-win32-x64/**/*.yml
           if-no-files-found: warn
