@@ -42,10 +42,14 @@ jobs:
 
       - name: Build macOS app
         if: runner.os == 'macOS'
+        env:
+          CI: false
         run: npm run release:mac
 
       - name: Build Windows app
         if: runner.os == 'Windows'
+        env:
+          CI: false
         run: npm run build && npx electron-builder --win
 
       - name: Upload macOS artifacts
