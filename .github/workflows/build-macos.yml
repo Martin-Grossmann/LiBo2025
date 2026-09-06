@@ -43,13 +43,15 @@ jobs:
       - name: Build macOS app
         if: runner.os == 'macOS'
         env:
-          CI: false
+          CI: "false"
+          DISABLE_ESLINT_PLUGIN: "true"
         run: npm run release:mac
 
       - name: Build Windows app
         if: runner.os == 'Windows'
         env:
-          CI: false
+          CI: "false"
+          DISABLE_ESLINT_PLUGIN: "true"
         run: npm run build && npx electron-builder --win
 
       - name: Upload macOS artifacts
