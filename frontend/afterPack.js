@@ -7,6 +7,12 @@ const path = require('path');
 const { rcedit } = require('rcedit');
 
 exports.default = async function(context) {
+  // The post-pack script uses robocopy/rcedit and must run only on Windows.
+  if (process.platform !== 'win32') {
+    console.log('afterPack: non-Windows platform detected, skipping Windows-specific post-pack steps.');
+    return;
+  }
+
   // 1. Copier node_modules via PowerShell
   const scriptPath = path.join(__dirname, 'postpack.ps1');
   try {
@@ -25,6 +31,11 @@ exports.default = async function(context) {
   console.log('Injection icone: iconPath=' + iconPath);
 
   try {
+    if (!require('fs').existsSync(iconPath)) {
+      console.log('afterPack: Pumba.ico introuvable, etape rcedit ignoree.');
+      return;
+    }
+
     await rcedit(exePath, {
       icon: iconPath
     });

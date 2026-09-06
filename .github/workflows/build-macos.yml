@@ -35,6 +35,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install backend dependencies
+        run: npm ci --prefix ../backend
+
       - name: Prepare CI build config
         shell: bash
         run: |
